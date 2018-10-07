@@ -1,0 +1,6 @@
+D:\учеба\5 семестр\СПП\Faker\InterfacesLib\bin\Debug\InterfacesLib.dll
+D:\учеба\5 семестр\СПП\Faker\InterfacesLib\bin\Debug\InterfacesLib.pdb
+D:\учеба\5 семестр\СПП\Faker\InterfacesLib\obj\Debug\InterfacesLib.csprojResolveAssemblyReference.cache
+D:\учеба\5 семестр\СПП\Faker\InterfacesLib\obj\Debug\InterfacesLib.csproj.CoreCompileInputs.cache
+D:\учеба\5 семестр\СПП\Faker\InterfacesLib\obj\Debug\InterfacesLib.dll
+D:\учеба\5 семестр\СПП\Faker\InterfacesLib\obj\Debug\InterfacesLib.pdb

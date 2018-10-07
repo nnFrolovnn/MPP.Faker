@@ -1,0 +1,9 @@
+D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\FakerApp.exe.config
+D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\FakerApp.exe
+D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\FakerApp.pdb
+D:\учеба\5 семестр\СПП\Faker\FakerApp\obj\Debug\FakerApp.csprojResolveAssemblyReference.cache
+D:\учеба\5 семестр\СПП\Faker\FakerApp\obj\Debug\FakerApp.csproj.CoreCompileInputs.cache
+D:\учеба\5 семестр\СПП\Faker\FakerApp\obj\Debug\FakerApp.exe
+D:\учеба\5 семестр\СПП\Faker\FakerApp\obj\Debug\FakerApp.pdb
+D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\InterfacesLib.dll
+D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\InterfacesLib.pdb
