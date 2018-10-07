@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class IntGenerator : IGenerator<int>
+    class IntGenerator : IGenerator
     {
-        public int Generate()
+        public object Generate()
         {
             int i = 9;
 

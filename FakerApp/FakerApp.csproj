@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Faker\Faker.csproj">
+      <Project>{f90951f3-0365-4251-9cd7-706489a93d50}</Project>
+      <Name>Faker</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InterfacesLib\InterfacesLib.csproj">
       <Project>{43288152-D3A7-4EE8-A964-C946EDBD9E54}</Project>
       <Name>InterfacesLib</Name>

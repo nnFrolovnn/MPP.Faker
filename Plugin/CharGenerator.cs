@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class CharGenerator : IGenerator<char>
+    class CharGenerator : IGenerator
     {
-        public char Generate()
+        public object Generate()
         {
             char i = 'a';
 

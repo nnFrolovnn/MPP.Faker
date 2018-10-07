@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class LongGenerator : IGenerator<long>
+    class LongGenerator : IGenerator
     {
-        public long Generate()
+        public object Generate()
         {
             long i = 9;
 

@@ -11,22 +11,27 @@ namespace FakerApp
             DllLoader dllLoader = new DllLoader();
             IPlugin plugin = dllLoader.Load(@"D:\учеба\5 семестр\СПП\Faker\Plugin\bin\Debug\Plugin.dll");
 
-            ConcurrentDictionary<Type, IGenerator<object>> dictionary = plugin.GetGenerators();
+            ConcurrentDictionary<Type, IGenerator> dictionary = plugin.GetGenerators();
+            Faker.Faker faker = new Faker.Faker(plugin.GetGenerators());
 
-            IGenerator<object> generator;
-            bool isgot = dictionary.TryGetValue(typeof(string), out generator);
+            Foo foo = faker.Create<Foo>();
 
-            if (isgot)
-            {
-                foreach (var i in dictionary.Values)
-                {
-                    Console.WriteLine(i.ToString());
-                }
-            }
 
-            Console.WriteLine(generator.Generate());
-            Console.WriteLine((string)generator.Generate());
             Console.ReadKey();
         }
+    }
+
+
+
+    public class Foo
+    {
+        string gg;
+        int i;
+
+        public int I { get; set; }
+
+        public string K { get; }
+        private double R { get; set; }
+        public string FF { set => gg = value; }
     }
 }

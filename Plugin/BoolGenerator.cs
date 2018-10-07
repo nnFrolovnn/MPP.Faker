@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class BoolGenerator : IGenerator<bool>
+    class BoolGenerator : IGenerator
     {
-        bool IGenerator<bool>.Generate()
+        public object Generate()
         {
             return true;
         }

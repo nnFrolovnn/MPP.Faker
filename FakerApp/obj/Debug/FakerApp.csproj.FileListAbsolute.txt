@@ -7,3 +7,5 @@ D:\учеба\5 семестр\СПП\Faker\FakerApp\obj\Debug\FakerApp.exe
 D:\учеба\5 семестр\СПП\Faker\FakerApp\obj\Debug\FakerApp.pdb
 D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\InterfacesLib.dll
 D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\InterfacesLib.pdb
+D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\Faker.dll
+D:\учеба\5 семестр\СПП\Faker\FakerApp\bin\Debug\Faker.pdb

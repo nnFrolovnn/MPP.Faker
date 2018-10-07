@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class ByteGenerator : IGenerator<byte>
+    class ByteGenerator : IGenerator
     {
-        public byte Generate()
+        public object Generate()
         {
             byte i = 1;
 

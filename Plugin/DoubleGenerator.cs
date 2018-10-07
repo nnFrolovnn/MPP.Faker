@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class DoubleGenerator : IGenerator<double>
+    class DoubleGenerator : IGenerator
     {
-        public double Generate()
+        public object Generate()
         {
             double i = 5.7;
 

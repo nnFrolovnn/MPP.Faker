@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class FloatGenerator : IGenerator<float>
+    class FloatGenerator : IGenerator
     {
-        public float Generate()
+        public object Generate()
         {
             float i = 4.5F;
 

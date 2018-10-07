@@ -2,9 +2,9 @@
 
 namespace Plugin
 {
-    class StringGenerator : IGenerator<string>
+    class StringGenerator : IGenerator
     {
-        public string Generate()
+        public object Generate()
         {
             return "rerere";
         }

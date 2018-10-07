@@ -5,6 +5,6 @@ namespace InterfacesLib
 {
     public interface IPlugin
     {
-        ConcurrentDictionary<Type, IGenerator<object>> GetGenerators();
+        ConcurrentDictionary<Type, IGenerator> GetGenerators();
     }
 }
