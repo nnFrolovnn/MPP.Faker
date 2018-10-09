@@ -46,6 +46,10 @@
     <Compile Include="DateTimeGenerator.cs" />
     <Compile Include="DoubleGenerator.cs" />
     <Compile Include="FloatGenerator.cs" />
+    <Compile Include="ICollectionDoubleGenerator.cs" />
+    <Compile Include="ICollectionFloatGenerator.cs" />
+    <Compile Include="ICollectionIntGenerator.cs" />
+    <Compile Include="IListIntGenerator.cs" />
     <Compile Include="IntGenerator.cs" />
     <Compile Include="LongGenerator.cs" />
     <Compile Include="Plugin.cs" />

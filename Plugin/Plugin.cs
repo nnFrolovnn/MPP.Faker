@@ -1,6 +1,8 @@
 ﻿using InterfacesLib;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Plugin
 {
@@ -19,6 +21,10 @@ namespace Plugin
             dictionary.TryAdd(typeof(char), new CharGenerator());
             dictionary.TryAdd(typeof(byte), new ByteGenerator());
             dictionary.TryAdd(typeof(DateTime), new DateTimeGenerator());
+            dictionary.TryAdd(typeof(Collection<int>), new ICollectionIntGenerator());
+            dictionary.TryAdd(typeof(Collection<double>), new ICollectionDoubleGenerator());
+            dictionary.TryAdd(typeof(Collection<float>), new ICollectionFloatGenerator());
+            dictionary.TryAdd(typeof(List<int>), new IListIntGenerator());
 
             return dictionary;
         }
