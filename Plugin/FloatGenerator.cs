@@ -6,7 +6,7 @@ namespace Plugin
     {
         public object Generate()
         {
-            float i = 4.5F;
+            float i = 45.2F;
 
             return i;
         }

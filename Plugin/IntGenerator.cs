@@ -6,7 +6,7 @@ namespace Plugin
     {
         public object Generate()
         {
-            int i = 9;
+            int i = 12345;
 
             return i;
         }

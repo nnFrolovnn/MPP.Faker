@@ -1,6 +1,7 @@
 ﻿using InterfacesLib;
 using System;
 using System.Collections.Concurrent;
+using Faker;
 
 namespace FakerApp
 {
@@ -9,7 +10,7 @@ namespace FakerApp
         static void Main(string[] args)
         {
             DllLoader dllLoader = new DllLoader();
-            IPlugin plugin = dllLoader.Load(@"D:\учеба\5 семестр\СПП\Faker\Plugin\bin\Debug\Plugin.dll");
+            IPlugin plugin = dllLoader.Load(@"D:\учеба\5 семестр\СПП\Faker\RandomPlugin\bin\Debug\RandomPlugin.dll");
 
             ConcurrentDictionary<Type, IGenerator> dictionary = plugin.GetGenerators();
             Faker.Faker faker = new Faker.Faker(plugin.GetGenerators());
@@ -45,6 +46,7 @@ namespace FakerApp
         string gg;
         int i;
 
+        public Bar bar { get; set; }
         public int I { get; set; }
 
         public string K { get; set; }

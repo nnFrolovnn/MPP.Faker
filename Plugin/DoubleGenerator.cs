@@ -6,7 +6,7 @@ namespace Plugin
     {
         public object Generate()
         {
-            double i = 5.7;
+            double i = 456.2;
 
             return i;
         }

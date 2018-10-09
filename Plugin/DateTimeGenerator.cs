@@ -7,7 +7,7 @@ namespace Plugin
     {
         public object Generate()
         {
-            DateTime dateTime = new DateTime(2000, 12, 1, 14, 24, 14);
+            DateTime dateTime = new DateTime(1, 1, 1, 1, 1, 1);
 
             return dateTime;
         }

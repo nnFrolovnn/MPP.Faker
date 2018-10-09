@@ -6,7 +6,7 @@ namespace Plugin
     {
         public object Generate()
         {
-            byte i = 1;
+            byte i = 123;
 
             return i;
         }

@@ -6,7 +6,7 @@ namespace Plugin
     {
         public object Generate()
         {
-            return "rerere";
+            return "string";
         }
     }
 }

@@ -11,33 +11,79 @@ namespace Faker
 {
     public class Faker
     {
+        #region Fields
         readonly ConcurrentDictionary<Type, IGenerator> registredTypes;
         readonly ConcurrentDictionary<Type, int> currentrecursionLevel;
         int maxRecursionLevel;
-        readonly Stack<Type> usedTypes;
         object locker;
+
+        #endregion
 
         public Faker(ConcurrentDictionary<Type, IGenerator> dictionary)
         {
             registredTypes = dictionary;
-            usedTypes = new Stack<Type>();
             locker = new object();
-            maxRecursionLevel = 1;
+            maxRecursionLevel = 2;
             currentrecursionLevel = new ConcurrentDictionary<Type, int>();
         }
 
         public Faker(ConcurrentDictionary<Type, IGenerator> dictionary, int recursionLevel)
         {
             registredTypes = dictionary;
-            usedTypes = new Stack<Type>();
             locker = new object();
             maxRecursionLevel = recursionLevel;
             currentrecursionLevel = new ConcurrentDictionary<Type, int>();
         }
 
+        #region Recursion Dictionary
+
+        public bool HaveToCreate(Type type)
+        {
+            if (currentrecursionLevel.ContainsKey(type))
+            {
+                if (currentrecursionLevel[type] < maxRecursionLevel)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public void AddToDict(Type type)
+        {
+            if (currentrecursionLevel.ContainsKey(type))
+            {
+                currentrecursionLevel[type] += 1;
+            }
+            else
+            {
+                currentrecursionLevel.TryAdd(type, 1);
+            }
+        }
+
+        public void RetrieveFromDict(Type type)
+        {
+            if (currentrecursionLevel.ContainsKey(type))
+            { 
+                currentrecursionLevel[type] -= 1;
+                if (currentrecursionLevel[type] < 1)
+                {
+                    currentrecursionLevel.TryRemove(type, out int i);
+                }
+            }
+        }
+
+        #endregion 
+
         public T Create<T>() where T : new()
         {
-            //TODO stack
             var constructors = (typeof(T).GetConstructors().OrderByDescending(x => x.GetParameters().Length)).ToArray();
 
             bool isCreated = false;
@@ -69,38 +115,6 @@ namespace Faker
             else
             {
                 throw new Exception("can't create object (Type: " + typeof(T).FullName + ")");
-            }
-        }
-
-        public bool HaveToCreate(Type type)
-        {
-            if (usedTypes.Count == 0)
-            {
-                return true;
-            }
-            else if (usedTypes.Contains(type))
-            {
-                if (currentrecursionLevel[type] < maxRecursionLevel)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        public void AddToStack(Type type)
-        {
-            //TODO
-            if(usedTypes.Contains(type))
-            {
-                currentrecursionLevel[type] += 1;
             }
         }
 
@@ -171,18 +185,30 @@ namespace Faker
 
         }
 
-
         private object GetDTO(Type type)
         {
             try
             {
-                MethodInfo method = typeof(Faker).GetMethod("Create");
-                MethodInfo genericMethod = method?.MakeGenericMethod(type);
-                var dto = genericMethod?.Invoke(this, null);
-                return dto;
+                if (HaveToCreate(type))
+                {
+                    AddToDict(type);
+
+                    MethodInfo method = typeof(Faker).GetMethod("Create");
+                    MethodInfo genericMethod = method?.MakeGenericMethod(type);
+                    var dto = genericMethod?.Invoke(this, null);
+
+                    RetrieveFromDict(type);
+
+                    return dto;
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch
             {
+                RetrieveFromDict(type);
                 return null;
             }
         }
