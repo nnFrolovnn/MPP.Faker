@@ -44,13 +44,16 @@ namespace FakerTest
         }
 
         [TestMethod]
-        public void TestRecursion2()
+        public void TestRecursion3()
         {
             bool rec1 = testclass.testTop != null;
             if (rec1)
             {
                 bool rec2 = testclass.testTop.testTop != null;
-                Assert.AreEqual(true, rec2);
+                if (!rec2)
+                {
+                    Assert.Fail("recursion level is 2");
+                }
             }
             else
             {
@@ -64,6 +67,33 @@ namespace FakerTest
             DateTime dateTime = new DateTime(1, 1, 1, 1, 1, 1);
 
             Assert.AreEqual(dateTime, testclass.testBar.testFoo.datetime);
+        }
+
+        [TestMethod]
+        public void TestChar()
+        {
+            char a = 'a';
+            Assert.AreEqual(a, testclass.ch);
+        }
+
+        [TestMethod]
+        public void TestFooInBarIsNotNull()
+        {
+            try
+            {
+                Assert.IsNotNull(testclass?.testBar?.testFoo.bar);
+            }
+            catch
+            {
+                Assert.Fail("recursion fail foo->bar");
+            }
+
+        }
+
+        [TestMethod]
+        public void TestList()
+        {
+            Assert.IsNotNull(testclass.list);
         }
     }
 }

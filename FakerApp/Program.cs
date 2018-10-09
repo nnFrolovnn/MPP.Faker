@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Concurrent;
 using Faker;
+using System.Collections.Generic;
 
 namespace FakerApp
 {
@@ -31,6 +32,7 @@ namespace FakerApp
 
         public Foo foo { get; private set; }
         public Bar bar { protected get; set; }
+        public List<int> list { get; set; }
 
         public Sor(Foo foo, TTR ttr) { }
         public Sor() { }
@@ -44,7 +46,6 @@ namespace FakerApp
     public class Foo
     {
         string gg;
-        int i;
 
         public Bar bar { get; set; }
         public int I { get; set; }

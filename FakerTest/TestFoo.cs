@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace FakerTest
 {
@@ -48,6 +50,7 @@ namespace FakerTest
     class TestTop
     {
         public TestTop testTop { get; set; }
+        public List<int> list { get; set; }
         public TestBar testBar { get; set; }
         public TestFoo privatesetfoo { get; private set; }
         public char ch { get; set; }

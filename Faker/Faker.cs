@@ -1,11 +1,8 @@
 ﻿using InterfacesLib;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Faker
 {
@@ -14,15 +11,12 @@ namespace Faker
         #region Fields
         readonly ConcurrentDictionary<Type, IGenerator> registredTypes;
         readonly ConcurrentDictionary<Type, int> currentrecursionLevel;
-        int maxRecursionLevel;
-        object locker;
-
+        public int maxRecursionLevel { get; private set; }
         #endregion
 
         public Faker(ConcurrentDictionary<Type, IGenerator> dictionary)
         {
             registredTypes = dictionary;
-            locker = new object();
             maxRecursionLevel = 2;
             currentrecursionLevel = new ConcurrentDictionary<Type, int>();
         }
@@ -30,8 +24,14 @@ namespace Faker
         public Faker(ConcurrentDictionary<Type, IGenerator> dictionary, int recursionLevel)
         {
             registredTypes = dictionary;
-            locker = new object();
-            maxRecursionLevel = recursionLevel;
+            if (recursionLevel > 1 && recursionLevel <= 15)
+            {
+                maxRecursionLevel = recursionLevel;
+            }
+            else
+            {
+                maxRecursionLevel = 2;
+            }
             currentrecursionLevel = new ConcurrentDictionary<Type, int>();
         }
 
