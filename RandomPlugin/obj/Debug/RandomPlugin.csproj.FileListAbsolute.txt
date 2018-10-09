@@ -1,0 +1,8 @@
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\bin\Debug\RandomPlugin.dll
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\bin\Debug\RandomPlugin.pdb
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\bin\Debug\InterfacesLib.dll
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\bin\Debug\InterfacesLib.pdb
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\obj\Debug\RandomPlugin.csprojResolveAssemblyReference.cache
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\obj\Debug\RandomPlugin.csproj.CoreCompileInputs.cache
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\obj\Debug\RandomPlugin.dll
+D:\учеба\5 семестр\СПП\Faker\RandomPlugin\obj\Debug\RandomPlugin.pdb

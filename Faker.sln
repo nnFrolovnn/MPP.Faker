@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin", "Plugin\Plugin.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesLib", "InterfacesLib\InterfacesLib.csproj", "{43288152-D3A7-4EE8-A964-C946EDBD9E54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomPlugin", "RandomPlugin\RandomPlugin.csproj", "{1656BC81-EAD1-4CC7-BCAF-613B15110DF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakerTest", "FakerTest\FakerTest.csproj", "{06D508AE-0F53-43D0-AD30-1DD040A9C7DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{43288152-D3A7-4EE8-A964-C946EDBD9E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43288152-D3A7-4EE8-A964-C946EDBD9E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43288152-D3A7-4EE8-A964-C946EDBD9E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1656BC81-EAD1-4CC7-BCAF-613B15110DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1656BC81-EAD1-4CC7-BCAF-613B15110DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1656BC81-EAD1-4CC7-BCAF-613B15110DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1656BC81-EAD1-4CC7-BCAF-613B15110DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D508AE-0F53-43D0-AD30-1DD040A9C7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D508AE-0F53-43D0-AD30-1DD040A9C7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D508AE-0F53-43D0-AD30-1DD040A9C7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D508AE-0F53-43D0-AD30-1DD040A9C7DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
